@@ -1,0 +1,5 @@
+﻿  01 全局区.cpp
+  02 栈区.cpp
+  正在生成代码...
+D:\BaiduSyncdisk\代码\代码\12 内存四区\内存四区\02 栈区.cpp(10,1): warning C4172: 返回局部变量的地址或临时 : a
+  内存四区.vcxproj -> D:\BaiduSyncdisk\代码\代码\12 内存四区\内存四区\Debug\内存四区.exe

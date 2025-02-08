@@ -1,0 +1,101 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\\u6D1B\u8C37\u4EE3\u7801\\\u6D1B\u8C372\\\u6D1B\u8C37\u4F5C\u4E1A2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C66BEF62-C488-45BD-B002-6FB788CD6A96}|\u6D1B\u8C37\u4F5C\u4E1A2.vcxproj|D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\\u6D1B\u8C37\u4EE3\u7801\\\u6D1B\u8C372\\\u6D1B\u8C37\u4F5C\u4E1A2\\\u6309\u4F60\u6240\u9700.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C66BEF62-C488-45BD-B002-6FB788CD6A96}|\u6D1B\u8C37\u4F5C\u4E1A2.vcxproj|solutionrelative:\u6309\u4F60\u6240\u9700.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C66BEF62-C488-45BD-B002-6FB788CD6A96}|\u6D1B\u8C37\u4F5C\u4E1A2.vcxproj|D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\\u6D1B\u8C37\u4EE3\u7801\\\u6D1B\u8C372\\\u6D1B\u8C37\u4F5C\u4E1A2\\\u4E09\u4F4D\u6570\u6392\u5E8F.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C66BEF62-C488-45BD-B002-6FB788CD6A96}|\u6D1B\u8C37\u4F5C\u4E1A2.vcxproj|solutionrelative:\u4E09\u4F4D\u6570\u6392\u5E8F.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C66BEF62-C488-45BD-B002-6FB788CD6A96}|\u6D1B\u8C37\u4F5C\u4E1A2.vcxproj|D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\\u6D1B\u8C37\u4EE3\u7801\\\u6D1B\u8C372\\\u6D1B\u8C37\u4F5C\u4E1A2\\\u5C0F\u6B63\u59B9\u7684\u6570.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C66BEF62-C488-45BD-B002-6FB788CD6A96}|\u6D1B\u8C37\u4F5C\u4E1A2.vcxproj|solutionrelative:\u5C0F\u6B63\u59B9\u7684\u6570.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C66BEF62-C488-45BD-B002-6FB788CD6A96}|\u6D1B\u8C37\u4F5C\u4E1A2.vcxproj|D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\\u6D1B\u8C37\u4EE3\u7801\\\u6D1B\u8C372\\\u6D1B\u8C37\u4F5C\u4E1A2\\\u95F0\u5E74.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C66BEF62-C488-45BD-B002-6FB788CD6A96}|\u6D1B\u8C37\u4F5C\u4E1A2.vcxproj|solutionrelative:\u95F0\u5E74.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C66BEF62-C488-45BD-B002-6FB788CD6A96}|\u6D1B\u8C37\u4F5C\u4E1A2.vcxproj|D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\\u6D1B\u8C37\u4EE3\u7801\\\u6D1B\u8C372\\\u6D1B\u8C37\u4F5C\u4E1A2\\\u4E09\u89D2\u5F62\u9762\u79EF.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C66BEF62-C488-45BD-B002-6FB788CD6A96}|\u6D1B\u8C37\u4F5C\u4E1A2.vcxproj|solutionrelative:\u4E09\u89D2\u5F62\u9762\u79EF.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "\u6309\u4F60\u6240\u9700.cpp",
+              "DocumentMoniker": "D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\\u6D1B\u8C37\u4EE3\u7801\\\u6D1B\u8C372\\\u6D1B\u8C37\u4F5C\u4E1A2\\\u6309\u4F60\u6240\u9700.cpp",
+              "RelativeDocumentMoniker": "\u6309\u4F60\u6240\u9700.cpp",
+              "ToolTip": "D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\\u6D1B\u8C37\u4EE3\u7801\\\u6D1B\u8C372\\\u6D1B\u8C37\u4F5C\u4E1A2\\\u6309\u4F60\u6240\u9700.cpp",
+              "RelativeToolTip": "\u6309\u4F60\u6240\u9700.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-15T14:11:21.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "\u4E09\u4F4D\u6570\u6392\u5E8F.cpp",
+              "DocumentMoniker": "D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\\u6D1B\u8C37\u4EE3\u7801\\\u6D1B\u8C372\\\u6D1B\u8C37\u4F5C\u4E1A2\\\u4E09\u4F4D\u6570\u6392\u5E8F.cpp",
+              "RelativeDocumentMoniker": "\u4E09\u4F4D\u6570\u6392\u5E8F.cpp",
+              "ToolTip": "D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\\u6D1B\u8C37\u4EE3\u7801\\\u6D1B\u8C372\\\u6D1B\u8C37\u4F5C\u4E1A2\\\u4E09\u4F4D\u6570\u6392\u5E8F.cpp",
+              "RelativeToolTip": "\u4E09\u4F4D\u6570\u6392\u5E8F.cpp",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-15T14:00:11.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "\u95F0\u5E74.cpp",
+              "DocumentMoniker": "D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\\u6D1B\u8C37\u4EE3\u7801\\\u6D1B\u8C372\\\u6D1B\u8C37\u4F5C\u4E1A2\\\u95F0\u5E74.cpp",
+              "RelativeDocumentMoniker": "\u95F0\u5E74.cpp",
+              "ToolTip": "D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\\u6D1B\u8C37\u4EE3\u7801\\\u6D1B\u8C372\\\u6D1B\u8C37\u4F5C\u4E1A2\\\u95F0\u5E74.cpp",
+              "RelativeToolTip": "\u95F0\u5E74.cpp",
+              "ViewState": "AgIAABcAAAAAAAAAAADwvx8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-15T13:56:02.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "\u5C0F\u6B63\u59B9\u7684\u6570.cpp",
+              "DocumentMoniker": "D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\\u6D1B\u8C37\u4EE3\u7801\\\u6D1B\u8C372\\\u6D1B\u8C37\u4F5C\u4E1A2\\\u5C0F\u6B63\u59B9\u7684\u6570.cpp",
+              "RelativeDocumentMoniker": "\u5C0F\u6B63\u59B9\u7684\u6570.cpp",
+              "ToolTip": "D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\\u6D1B\u8C37\u4EE3\u7801\\\u6D1B\u8C372\\\u6D1B\u8C37\u4F5C\u4E1A2\\\u5C0F\u6B63\u59B9\u7684\u6570.cpp",
+              "RelativeToolTip": "\u5C0F\u6B63\u59B9\u7684\u6570.cpp",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-15T10:22:18.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "\u4E09\u89D2\u5F62\u9762\u79EF.cpp",
+              "DocumentMoniker": "D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\\u6D1B\u8C37\u4EE3\u7801\\\u6D1B\u8C372\\\u6D1B\u8C37\u4F5C\u4E1A2\\\u4E09\u89D2\u5F62\u9762\u79EF.cpp",
+              "RelativeDocumentMoniker": "\u4E09\u89D2\u5F62\u9762\u79EF.cpp",
+              "ToolTip": "D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\\u6D1B\u8C37\u4EE3\u7801\\\u6D1B\u8C372\\\u6D1B\u8C37\u4F5C\u4E1A2\\\u4E09\u89D2\u5F62\u9762\u79EF.cpp",
+              "RelativeToolTip": "\u4E09\u89D2\u5F62\u9762\u79EF.cpp",
+              "ViewState": "AgIAACcAAAAAAAAAAAAqwD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-15T09:16:32.244Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

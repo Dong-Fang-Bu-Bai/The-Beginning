@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\05 \u7A0B\u5E8F\u6D41\u7A0B\u7ED3\u67842\\05 \u7A0B\u5E8F\u6D41\u7A0B\u7ED3\u67842\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3DCCA9D3-B528-423A-938B-956870967F00}|05 \u7A0B\u5E8F\u6D41\u7A0B\u7ED3\u67842.vcxproj|D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\05 \u7A0B\u5E8F\u6D41\u7A0B\u7ED3\u67842\\05 \u7A0B\u5E8F\u6D41\u7A0B\u7ED3\u67842\\02 \u5FAA\u73AF\u7ED3\u6784\u6848\u4F8B-\u731C\u6570\u5B57.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3DCCA9D3-B528-423A-938B-956870967F00}|05 \u7A0B\u5E8F\u6D41\u7A0B\u7ED3\u67842.vcxproj|solutionrelative:02 \u5FAA\u73AF\u7ED3\u6784\u6848\u4F8B-\u731C\u6570\u5B57.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "02 \u5FAA\u73AF\u7ED3\u6784\u6848\u4F8B-\u731C\u6570\u5B57.cpp",
+              "DocumentMoniker": "D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\05 \u7A0B\u5E8F\u6D41\u7A0B\u7ED3\u67842\\05 \u7A0B\u5E8F\u6D41\u7A0B\u7ED3\u67842\\02 \u5FAA\u73AF\u7ED3\u6784\u6848\u4F8B-\u731C\u6570\u5B57.cpp",
+              "RelativeDocumentMoniker": "02 \u5FAA\u73AF\u7ED3\u6784\u6848\u4F8B-\u731C\u6570\u5B57.cpp",
+              "ToolTip": "D:\\BaiduSyncdisk\\\u4EE3\u7801\\\u4EE3\u7801\\05 \u7A0B\u5E8F\u6D41\u7A0B\u7ED3\u67842\\05 \u7A0B\u5E8F\u6D41\u7A0B\u7ED3\u67842\\02 \u5FAA\u73AF\u7ED3\u6784\u6848\u4F8B-\u731C\u6570\u5B57.cpp",
+              "RelativeToolTip": "02 \u5FAA\u73AF\u7ED3\u6784\u6848\u4F8B-\u731C\u6570\u5B57.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-28T08:33:33.465Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
