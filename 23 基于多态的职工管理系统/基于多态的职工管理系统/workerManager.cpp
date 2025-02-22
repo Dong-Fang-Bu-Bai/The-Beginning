@@ -2,6 +2,42 @@
 
 WorkerManager::WorkerManager()
 {
+	//1.文件不存在
+	
+	ifstream ifs;
+	ifs.open(FILENAME, ios::in);//打开文件  读文件
+
+	if (!ifs.is_open())
+	{
+		cout << "文件不存在" << endl;
+		//初始化属性
+		//初始化记录人数
+		this->m_EmpNum = 0;
+		//初始化职工数组指针
+		this->m_EmpArray = NULL;
+		//初始化文件是否为空
+		this->m_FileIsEmpty = true;
+		ifs.close();
+		return;
+	}
+
+	//2.文件存在 数据为空
+	char ch;
+	ifs >> ch;
+	if (ifs.eof())
+	{
+		//文件为空
+		cout << "文件为空！" << endl;
+		//初始化记录人数
+		this->m_EmpNum = 0;
+		//初始化职工数组指针
+		this->m_EmpArray = NULL;
+		//初始化文件是否为空
+		this->m_FileIsEmpty = true;
+		ifs.close();
+		return;
+	}
+
 	//初始化属性
 	this->m_EmpNum = 0;
 
@@ -108,8 +144,8 @@ void WorkerManager::Add_Emp()
 		//更新新的职工人数
 		this->m_EmpNum = newSize;
 
-		//成功添加后  保存到文件中
-
+		//更新职工不为空标志
+		this->m_FileIsEmpty = false;
 
 		//提示添加成功
 		cout << "成功添加" << addNum << "名新职工！" << endl;
@@ -144,6 +180,18 @@ void WorkerManager::save()
 
 	//关闭文件
 	ofs.close();
+}
+
+
+//统计文件中人数
+int WorkerManager::get_EmpNum()
+{
+	ifstream ifs;
+	ifs.open(FILENAME, ios::in); //打开文件 读文件
+
+	int id;
+	string name;
+
 }
 
 WorkerManager::~WorkerManager()

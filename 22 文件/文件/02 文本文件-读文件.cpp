@@ -43,7 +43,9 @@
 //	
 //	//第四种
 //	char c;
-//	while ((c = ifs.get()) != EOF) //EOF end of file 文件结束标识
+//	while ((c = ifs.get()) != EOF) 
+//  = 优先级高于 !=
+//EOF end of file 文件结束标识
 //	{
 //		cout << c;
 //	}
