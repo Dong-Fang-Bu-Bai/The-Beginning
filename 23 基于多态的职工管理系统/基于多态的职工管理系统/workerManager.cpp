@@ -1,5 +1,6 @@
 #include"workerManager.h"
 
+//构造函数
 WorkerManager::WorkerManager()
 {
 	//1.文件不存在
@@ -9,7 +10,7 @@ WorkerManager::WorkerManager()
 
 	if (!ifs.is_open())
 	{
-		cout << "文件不存在" << endl;
+		//cout << "文件不存在" << endl;
 		//初始化属性
 		//初始化记录人数
 		this->m_EmpNum = 0;
@@ -27,7 +28,7 @@ WorkerManager::WorkerManager()
 	if (ifs.eof())
 	{
 		//文件为空
-		cout << "文件为空！" << endl;
+		//cout << "文件为空！" << endl;
 		//初始化记录人数
 		this->m_EmpNum = 0;
 		//初始化职工数组指针
@@ -38,10 +39,24 @@ WorkerManager::WorkerManager()
 		return;
 	}
 
-	//初始化属性
-	this->m_EmpNum = 0;
+	//3.文件存在，并且记录数据
+	int num = this->get_EmpNum();
+	cout << "职工人数为：" << num << endl;
+	this->m_EmpNum = num;
 
-	this->m_EmpArray = NULL;
+	//开辟空间
+	this->m_EmpArray = new Worker * [this->m_EmpNum];
+
+	//调用初始化程序,将文件中的数据存到数组中
+	this->init_Emp();
+
+	//测试代码
+	/*for (int i = 0; i < this->m_EmpNum; i++)
+	{
+		cout << "职工编号：" << this->m_EmpArray[i]->m_Id << " "
+			<< "职工姓名：" << this->m_EmpArray[i]->m_Name << " "
+			<< "职工岗位：" << this->m_EmpArray[i]->m_DeptId << endl;
+	}*/
 }
 
 //展示菜单
@@ -191,9 +206,55 @@ int WorkerManager::get_EmpNum()
 
 	int id;
 	string name;
+	int dId;
 
+	int num = 0;
+	while (ifs >> id && ifs >> name && ifs >> dId)
+	{
+		//统计人数变量
+		num++;
+	}
+	return num;
 }
 
+//初始化员工
+void WorkerManager::init_Emp()
+{
+	ifstream ifs;
+	ifs.open(FILENAME, ios::in);
+
+	int id;
+	string name;
+	int dId;
+
+	int index = 0;
+	while (ifs >> id && ifs >> name && ifs >> dId)
+	{
+		Worker* worker = NULL;
+
+		if (dId == 1)//普通员工
+		{
+			worker = new Employee(id, name, dId);
+		}
+		else if (dId == 2)//经理
+		{
+			worker = new Manager(id, name, dId);
+		}
+		else  //老板
+		{
+			worker = new Boss(id, name, dId);
+		}
+
+		this->m_EmpArray[index] = worker;
+		index++;
+	}
+
+	//关闭文件
+	ifs.close();
+}
+
+
+//析构函数
 WorkerManager::~WorkerManager()
 {
 	if (this->m_EmpArray != NULL)
