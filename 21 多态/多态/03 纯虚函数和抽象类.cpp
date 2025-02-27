@@ -14,6 +14,8 @@
 //	virtual  void func() = 0;
 //};
 //
+// 
+// 
 //class Son :public Base
 //{
 //public:
