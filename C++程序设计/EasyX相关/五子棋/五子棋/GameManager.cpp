@@ -28,16 +28,35 @@ void GameManager::drawMainMenu() {
     // 绘制标题
     outtextxy(180, 100, L"Gomoku");
     
-    // 绘制按钮
+    #include "LeaderboardManager.h"
+
+// 在合适的位置添加 LeaderboardManager 的实例化和调用逻辑
+LeaderboardManager leaderboardManager;
+
+// 修改 drawMainMenu 函数，添加排行榜按钮点击逻辑
+void GameManager::drawMainMenu() {
+    // ... existing code ...
     setfillcolor(RGB(200, 200, 200));
-    fillroundrect(200, 200, 400, 300, 10, 10);
-    outtextxy(230, 240, L"Start Game");
+    if (checkButtonClick(msg.x, msg.y, 200, 320, 200, 100)) {
+        // 显示排行榜
+        const auto& leaderboard = leaderboardManager.getLeaderboard();
+        for (const auto& entry : leaderboard) {
+            std::cout << entry.first << ": " << entry.second << std::endl;
+        }
+    }
+    // ... existing code ...
     
-    fillroundrect(200, 320, 400, 420, 10, 10);
-    outtextxy(235, 360, L"Leaderboard");
+    setfillcolor(RGB(150, 150, 255));
+    fillroundrect(180, 180, 420, 320, 20, 20);
+    settextcolor(WHITE);
+    settextstyle(40, 0, L"Microsoft YaHei");
+    outtextxy(250, 220, L"Start Game");
     
-    fillroundrect(200, 440, 400, 540, 10, 10);
-    outtextxy(240, 480, L"Exit Game");
+    fillroundrect(180, 340, 420, 460, 20, 20);
+    outtextxy(255, 380, L"Leaderboard");
+    
+    fillroundrect(180, 460, 420, 580, 20, 20);
+    outtextxy(260, 500, L"Exit Game");
 }
 
 bool GameManager::checkButtonClick(int x, int y, int btnX, int btnY, int width, int height) {
@@ -116,16 +135,8 @@ void GameManager::processInput()
             float cellSize = static_cast<float>(graphics.getCellSize());
             float offset = cellSize / 2.0f;
             // 添加偏移量验证
-            std::cout << "cellSize=" << cellSize << std::endl;
-            std::cout << "Raw coordinates: x=" << msg.x << ", y=" << msg.y << std::endl;
-            std::cout << "Using offset: " << offset << std::endl;
-            // 移除整数offset定义，使用已计算的浮点offset
-            std::cout << "Calculating gridX: (" << msg.x << " - " << offset << ")/" << graphics.getCellSize() << " = " << (msg.x - offset) / graphics.getCellSize() << std::endl;
-            int gridX = static_cast<int>((msg.x - offset) / cellSize + 0.5f);
-
-            std::cout << "Calculating gridY: (" << msg.y << " - " << offset << ")/" << cellSize << " = " << (msg.y - offset) / cellSize << std::endl;
-            int gridY = static_cast<int>((msg.y - offset) / cellSize + 0.5f);
-            std::cout << "Clicked at (" << msg.x << "," << msg.y << ") -> grid(" << gridX << "," << gridY << ")" << std::endl;
+            // 移除调试信息
+            
             // 增加坐标有效性检查
             if (gridX >= 0 && gridX < ChessBoard::BOARD_SIZE && gridY >= 0 && gridY < ChessBoard::BOARD_SIZE)
             {
@@ -185,14 +196,40 @@ void GameManager::renderGame()
 void GameManager::drawPauseMenu() 
 {
     cleardevice();
+    settextstyle(60, 0, L"Microsoft YaHei");
+    settextcolor(RGB(255, 0, 0));
+    outtextxy(150, 80, L"Game Paused");
+    
+    setfillcolor(RGB(150, 150, 255));
+    fillroundrect(180, 220, 420, 340, 20, 20);
+    settextcolor(WHITE);
     settextstyle(40, 0, L"Microsoft YaHei");
-    settextcolor(BLACK);
+    outtextxy(250, 260, L"Resume Game");
     
-    // 绘制标题
-    outtextxy(180, 100, L"Game Paused");
+    fillroundrect(180, 360, 420, 480, 20, 20);
+    outtextxy(255, 400, L"Main Menu");
     
-    // 绘制按钮
+    fillroundrect(180, 480, 420, 600, 20, 20);
+    outtextxy(260, 520, L"Exit Game");
+    
+    #include "LeaderboardManager.h"
+
+// 在合适的位置添加 LeaderboardManager 的实例化和调用逻辑
+LeaderboardManager leaderboardManager;
+
+// 修改 drawMainMenu 函数，添加排行榜按钮点击逻辑
+void GameManager::drawMainMenu() {
+    // ... existing code ...
     setfillcolor(RGB(200, 200, 200));
+    if (checkButtonClick(msg.x, msg.y, 200, 320, 200, 100)) {
+        // 显示排行榜
+        const auto& leaderboard = leaderboardManager.getLeaderboard();
+        for (const auto& entry : leaderboard) {
+            std::cout << entry.first << ": " << entry.second << std::endl;
+        }
+    }
+    // ... existing code ...
+    
     // 调整按钮高度为100像素
     fillroundrect(200, 200, 400, 300, 10, 10);
     outtextxy(220, 240, L"Resume Game");

@@ -51,11 +51,13 @@ void GraphicsManager::drawGrid()
  * - 棋盘坐标(x,y)转换为像素中心点坐标
  * - 公式：x_pixel = cellSize/2 + x*cellSize
  */
+// 提取重复的计算逻辑
+const int halfCellSize = getCellSize() / 2;
 void GraphicsManager::drawPiece(int x, int y, int player) 
 {
     COLORREF pieceColor = (player == 1) ? BLACK : WHITE;
     setfillcolor(pieceColor);
-    fillcircle(getCellSize()/2 + x*getCellSize(), getCellSize()/2 + y*getCellSize(), getCellSize()/2 - 2);
+    fillcircle(halfCellSize + x * getCellSize(), halfCellSize + y * getCellSize(), halfCellSize - 2);
 }
 
 /*
