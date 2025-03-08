@@ -1,0 +1,3 @@
+﻿  GameManager.cpp
+D:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\GameManager.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  五子棋.vcxproj -> D:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\x64\Debug\五子棋.exe
