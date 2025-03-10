@@ -131,6 +131,7 @@
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="GraphicsManager.h" />
+    <ClInclude Include="LeaderboardManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ChessBoard.cpp" />

@@ -107,9 +107,9 @@ private:
 	}
 public:
 	Date(int year, int month, int day) :
-		_year(year), _month(month), _day(day)
-	{
-	}
+		_year(year), _month(month), _day(day) 
+	{ 
+	 }
 	//有参数的构造函数
 
 	bool operator>(const Date& d)
@@ -222,7 +222,7 @@ public:
 
 };
 
-int main3()
+int main()
 {
 	//判断天数
 	int day1, day2, mon1, mon2, year1, year2;
@@ -233,21 +233,21 @@ int main3()
 	d.getDaynums(d2);
 
 	cout << num << endl;
-
+	
 
 	//在得出天数后，判断是打鱼还是晒网
 
 	switch (num % 5)
 	{
-	case 1:
-	case 2:
-	case 3:
-		cout << "打鱼" << endl;
-		break;
-	case 4:
-	case 0:
-		cout << "晒网" << endl;
-		break;
+		case 1:
+		case 2:
+		case 3:
+			cout << "打鱼" << endl;
+			break;
+		case 4:
+		case 0:
+			cout << "晒网" << endl;
+			break;
 	}
 
 
@@ -255,3 +255,14 @@ int main3()
 	system("pause");
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
+

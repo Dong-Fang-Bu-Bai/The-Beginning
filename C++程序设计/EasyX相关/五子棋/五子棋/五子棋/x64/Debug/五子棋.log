@@ -1,3 +1,65 @@
-﻿  GameManager.cpp
-D:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\GameManager.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  五子棋.vcxproj -> D:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\x64\Debug\五子棋.exe
+﻿  ChessBoard.cpp
+  GameManager.cpp
+  GraphicsManager.cpp
+  main.cpp
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(22,5): error C2065: “graphicsManager”: 未声明的标识符
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(26,24): error C3861: “getmouse”: 找不到标识符
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(35,17): error C2065: “gameManager”: 未声明的标识符
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(35,38): error C2065: “row”: 未声明的标识符
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(37,17): error C2065: “graphicsManager”: 未声明的标识符
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(40,25): error C2065: “gameManager”: 未声明的标识符
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(41,45): error C2001: 常量中有换行符
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(42,21): error C2143: 语法错误: 缺少“)”(在“}”的前面)
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(41,25): error C2665: “outtextxy”: 没有重载函数可以转换所有参数类型
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include\easyx.h(226,6):
+      可能是“void outtextxy(int,int,TCHAR)”
+          d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(41,25):
+          “void outtextxy(int,int,TCHAR)”: 无法将参数 3 从“const char [18]”转换为“TCHAR”
+              d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(41,45):
+              没有使该转换得以执行的上下文
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include\easyx.h(225,6):
+      或    “void outtextxy(int,int,LPCTSTR)”
+          d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(41,25):
+          “void outtextxy(int,int,LPCTSTR)”: 无法将参数 3 从“const char [18]”转换为“LPCTSTR”
+              d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(41,45):
+              指向的类型不相关; 转换需要 reinterpret_cast、C 样式强制转换或带圆括号的函数样式强制转换
+      d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(41,25):
+      尝试匹配参数列表“(int, int, const char [18])”时
+  
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(42,21): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(43,45): error C2001: 常量中有换行符
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(44,21): error C2143: 语法错误: 缺少“)”(在“}”的前面)
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(43,25): error C2665: “outtextxy”: 没有重载函数可以转换所有参数类型
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include\easyx.h(226,6):
+      可能是“void outtextxy(int,int,TCHAR)”
+          d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(43,25):
+          “void outtextxy(int,int,TCHAR)”: 无法将参数 3 从“const char [18]”转换为“TCHAR”
+              d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(43,45):
+              没有使该转换得以执行的上下文
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include\easyx.h(225,6):
+      或    “void outtextxy(int,int,LPCTSTR)”
+          d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(43,25):
+          “void outtextxy(int,int,LPCTSTR)”: 无法将参数 3 从“const char [18]”转换为“LPCTSTR”
+              d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(43,45):
+              指向的类型不相关; 转换需要 reinterpret_cast、C 样式强制转换或带圆括号的函数样式强制转换
+      d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(43,25):
+      尝试匹配参数列表“(int, int, const char [18])”时
+  
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(44,21): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(49,17): error C2065: “gameManager”: 未声明的标识符
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(52,5): error C2059: 语法错误:“}”
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(52,5): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(56,5): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(56,5): error C2556: “int closegraph(void)”: 重载函数与“void closegraph(void)”只是在返回类型上不同
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include\easyx.h(133,6):
+      参见“closegraph”的声明
+  
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(56,5): error C2371: “closegraph”: 重定义；不同的基类型
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include\easyx.h(133,6):
+      参见“closegraph”的声明
+  
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(58,5): error C2059: 语法错误:“return”
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(59,1): error C2059: 语法错误:“}”
+d:\代码\The-Beginning\C++程序设计\EasyX相关\五子棋\五子棋\main.cpp(59,1): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+  正在生成代码...

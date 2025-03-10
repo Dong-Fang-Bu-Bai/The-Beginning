@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "D:\\\u4EE3\u7801\\The-Beginning\\C\u002B\u002B\u7A0B\u5E8F\u8BBE\u8BA1\\EasyX\u76F8\u5173\\\u4E94\u5B50\u68CB\\\u4E94\u5B50\u68CB\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{57F93838-1749-4F81-AD1A-7421900049FE}|\u4E94\u5B50\u68CB.vcxproj|D:\\\u4EE3\u7801\\The-Beginning\\C\u002B\u002B\u7A0B\u5E8F\u8BBE\u8BA1\\EasyX\u76F8\u5173\\\u4E94\u5B50\u68CB\\\u4E94\u5B50\u68CB\\GameManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{57F93838-1749-4F81-AD1A-7421900049FE}|\u4E94\u5B50\u68CB.vcxproj|d:\\\u4EE3\u7801\\The-Beginning\\C\u002B\u002B\u7A0B\u5E8F\u8BBE\u8BA1\\EasyX\u76F8\u5173\\\u4E94\u5B50\u68CB\\\u4E94\u5B50\u68CB\\GameManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{57F93838-1749-4F81-AD1A-7421900049FE}|\u4E94\u5B50\u68CB.vcxproj|solutionrelative:GameManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
@@ -32,11 +32,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "GameManager.cpp",
-              "DocumentMoniker": "D:\\\u4EE3\u7801\\The-Beginning\\C\u002B\u002B\u7A0B\u5E8F\u8BBE\u8BA1\\EasyX\u76F8\u5173\\\u4E94\u5B50\u68CB\\\u4E94\u5B50\u68CB\\GameManager.cpp",
+              "DocumentMoniker": "d:\\\u4EE3\u7801\\The-Beginning\\C\u002B\u002B\u7A0B\u5E8F\u8BBE\u8BA1\\EasyX\u76F8\u5173\\\u4E94\u5B50\u68CB\\\u4E94\u5B50\u68CB\\GameManager.cpp",
               "RelativeDocumentMoniker": "GameManager.cpp",
-              "ToolTip": "D:\\\u4EE3\u7801\\The-Beginning\\C\u002B\u002B\u7A0B\u5E8F\u8BBE\u8BA1\\EasyX\u76F8\u5173\\\u4E94\u5B50\u68CB\\\u4E94\u5B50\u68CB\\GameManager.cpp",
+              "ToolTip": "d:\\\u4EE3\u7801\\The-Beginning\\C\u002B\u002B\u7A0B\u5E8F\u8BBE\u8BA1\\EasyX\u76F8\u5173\\\u4E94\u5B50\u68CB\\\u4E94\u5B50\u68CB\\GameManager.cpp",
               "RelativeToolTip": "GameManager.cpp",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAFwAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-04T07:44:36.229Z",
               "EditorCaption": ""
@@ -63,8 +63,7 @@
               "RelativeToolTip": "GraphicsManager.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-04T07:41:41.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T07:41:41.106Z"
             },
             {
               "$type": "Document",
