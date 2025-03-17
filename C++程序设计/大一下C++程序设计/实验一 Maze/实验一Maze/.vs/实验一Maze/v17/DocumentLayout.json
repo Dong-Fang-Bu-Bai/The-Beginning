@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{073E43D3-45F1-4E8B-8901-CD6C07008FB9}|\u5B9E\u9A8C\u4E00Maze.vcxproj|solutionrelative:Maze.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{073E43D3-45F1-4E8B-8901-CD6C07008FB9}|\u5B9E\u9A8C\u4E00Maze.vcxproj|D:\\\u4EE3\u7801\\The-Beginning\\C\u002B\u002B\u7A0B\u5E8F\u8BBE\u8BA1\\\u5927\u4E00\u4E0BC\u002B\u002B\u7A0B\u5E8F\u8BBE\u8BA1\\\u5B9E\u9A8C\u4E00 Maze\\\u5B9E\u9A8C\u4E00Maze\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{073E43D3-45F1-4E8B-8901-CD6C07008FB9}|\u5B9E\u9A8C\u4E00Maze.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{073E43D3-45F1-4E8B-8901-CD6C07008FB9}|\u5B9E\u9A8C\u4E00Maze.vcxproj|D:\\\u4EE3\u7801\\The-Beginning\\C\u002B\u002B\u7A0B\u5E8F\u8BBE\u8BA1\\\u5927\u4E00\u4E0BC\u002B\u002B\u7A0B\u5E8F\u8BBE\u8BA1\\\u5B9E\u9A8C\u4E00 Maze\\\u5B9E\u9A8C\u4E00Maze\\Maze.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{073E43D3-45F1-4E8B-8901-CD6C07008FB9}|\u5B9E\u9A8C\u4E00Maze.vcxproj|solutionrelative:Maze.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{073E43D3-45F1-4E8B-8901-CD6C07008FB9}|\u5B9E\u9A8C\u4E00Maze.vcxproj|D:\\\u4EE3\u7801\\The-Beginning\\C\u002B\u002B\u7A0B\u5E8F\u8BBE\u8BA1\\\u5927\u4E00\u4E0BC\u002B\u002B\u7A0B\u5E8F\u8BBE\u8BA1\\\u5B9E\u9A8C\u4E00 Maze\\\u5B9E\u9A8C\u4E00Maze\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{073E43D3-45F1-4E8B-8901-CD6C07008FB9}|\u5B9E\u9A8C\u4E00Maze.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Maze.h",
               "DocumentMoniker": "D:\\\u4EE3\u7801\\The-Beginning\\C\u002B\u002B\u7A0B\u5E8F\u8BBE\u8BA1\\\u5927\u4E00\u4E0BC\u002B\u002B\u7A0B\u5E8F\u8BBE\u8BA1\\\u5B9E\u9A8C\u4E00 Maze\\\u5B9E\u9A8C\u4E00Maze\\Maze.h",
               "RelativeDocumentMoniker": "Maze.h",
@@ -34,8 +34,7 @@
               "RelativeToolTip": "Maze.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-09T15:45:49.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-09T15:45:49.155Z"
             },
             {
               "$type": "Document",
@@ -45,14 +44,14 @@
               "RelativeDocumentMoniker": "Maze.cpp",
               "ToolTip": "D:\\\u4EE3\u7801\\The-Beginning\\C\u002B\u002B\u7A0B\u5E8F\u8BBE\u8BA1\\\u5927\u4E00\u4E0BC\u002B\u002B\u7A0B\u5E8F\u8BBE\u8BA1\\\u5B9E\u9A8C\u4E00 Maze\\\u5B9E\u9A8C\u4E00Maze\\Maze.cpp",
               "RelativeToolTip": "Maze.cpp",
-              "ViewState": "AgIAAGgBAAAAAAAAAAAAAG0BAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAAAHQAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-09T15:45:45.875Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "main.cpp",
               "DocumentMoniker": "D:\\\u4EE3\u7801\\The-Beginning\\C\u002B\u002B\u7A0B\u5E8F\u8BBE\u8BA1\\\u5927\u4E00\u4E0BC\u002B\u002B\u7A0B\u5E8F\u8BBE\u8BA1\\\u5B9E\u9A8C\u4E00 Maze\\\u5B9E\u9A8C\u4E00Maze\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "main.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-09T15:45:43.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-09T15:45:43.291Z"
             }
           ]
         }

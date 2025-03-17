@@ -107,23 +107,26 @@ void SolveMaze()
 			posi[i] = pos;
 			i++;
 		}
-		if (flag1)//用于第一步时无条件记录一次位置
+		else if (flag1)//用于第一步时无条件记录一次位置
 		{
 			posi[i] = pos;
 			i++;
 			flag1 = 0;
-			
+
 		}
-		if (pos!=posi[i-1]&&i>=2&&pos!=posi[i-2])//用于第二步后有条件记录一次位置
+		else 
 		{
-			posi[i] = pos;
-			i++;
+			if (pos != posi[i - 1] && i >= 2 && pos != posi[i - 2])//用于第二步后有条件记录一次位置
+			{
+				posi[i] = pos;
+				i++;
+			}
+			if (pos == posi[i - 2])
+			{
+				i--;
+			}
 		}
-		if(i>=400)
-		{
-			cout<<"array too small\n";
-			abort();//功能：异常终止一个进程
-		}
+
 		WheresRight(pos,heading,other);//记录右边的位置
 		if (!Wall(other))//如果右边没有墙，就向右转并前进一步
 		{
@@ -163,6 +166,49 @@ void SolveMaze()
 	delete[]maze;
 	delete[]posi;
 }
+
+
+//void SolveMaze()
+//{
+//
+//	while (!AtExit(pos))
+//	{
+//		if (i == 0 || posi[i - 1] != pos)
+//		{
+//			if (i >= 289)
+//			{
+//				int posiSize = 289 * 3;
+//				int* posi2 = new int[posiSize];
+//				for (int j = 0; j < i; j++)
+//				{
+//					posi2[j] = posi[j];
+//				}
+//				delete[] posi;
+//				posi = posi2;
+//			}
+//			posi[i] = pos;
+//			i++;
+//		}
+//		WheresRight(pos, heading, other);
+//		
+//		if (i >= 2 && posi[i - 2] == pos)
+//		{
+//			i--;
+//		}
+//	}
+//
+//	// 记录最终位置
+//	posi[i] = pos;
+//	i++;
+//	if (i >= 289 * 3 - 1)
+//	{
+//		cout << "array too small\n";
+//		abort();
+//	}
+//
+//	
+
+//}
 
 //	This function scans the maze array for the first non-wall item
 //	It assumes that the entrance is in the top row of the maze array
