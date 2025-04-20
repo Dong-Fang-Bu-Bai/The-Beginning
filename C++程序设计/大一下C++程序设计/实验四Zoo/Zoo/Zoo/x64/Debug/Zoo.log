@@ -1,0 +1,27 @@
+﻿  Zoo.cpp
+D:\代码\The-Beginning\C++程序设计\大一下C++程序设计\实验四Zoo\Zoo\Zoo.h(19,15): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+  (编译源文件“Zoo.cpp”)
+  
+D:\代码\The-Beginning\C++程序设计\大一下C++程序设计\实验四Zoo\Zoo\Zoo.h(34,10): warning C4244: “return”: 从“int”转换到“float”，可能丢失数据
+  (编译源文件“Zoo.cpp”)
+  
+D:\代码\The-Beginning\C++程序设计\大一下C++程序设计\实验四Zoo\Zoo\Zoo.cpp(41,15): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+D:\代码\The-Beginning\C++程序设计\大一下C++程序设计\实验四Zoo\Zoo\Zoo.cpp(115,73): warning C4244: “+=”: 从“float”转换到“int”，可能丢失数据
+D:\代码\The-Beginning\C++程序设计\大一下C++程序设计\实验四Zoo\Zoo\Zoo.cpp(121,77): warning C4244: “+=”: 从“float”转换到“int”，可能丢失数据
+D:\代码\The-Beginning\C++程序设计\大一下C++程序设计\实验四Zoo\Zoo\Zoo.cpp(128,77): warning C4244: “+=”: 从“float”转换到“int”，可能丢失数据
+D:\代码\The-Beginning\C++程序设计\大一下C++程序设计\实验四Zoo\Zoo\Zoo.cpp(194,16): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+D:\代码\The-Beginning\C++程序设计\大一下C++程序设计\实验四Zoo\Zoo\Zoo.cpp(205,29): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+D:\代码\The-Beginning\C++程序设计\大一下C++程序设计\实验四Zoo\Zoo\Zoo.cpp(206,29): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+D:\代码\The-Beginning\C++程序设计\大一下C++程序设计\实验四Zoo\Zoo\Zoo.cpp(207,29): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+D:\代码\The-Beginning\C++程序设计\大一下C++程序设计\实验四Zoo\Zoo\Zoo.cpp(269,74): warning C4244: “+=”: 从“float”转换到“int”，可能丢失数据
+D:\代码\The-Beginning\C++程序设计\大一下C++程序设计\实验四Zoo\Zoo\Zoo.cpp(275,75): warning C4244: “+=”: 从“float”转换到“int”，可能丢失数据
+D:\代码\The-Beginning\C++程序设计\大一下C++程序设计\实验四Zoo\Zoo\Zoo.cpp(282,73): warning C4244: “+=”: 从“float”转换到“int”，可能丢失数据
+  main.cpp
+D:\代码\The-Beginning\C++程序设计\大一下C++程序设计\实验四Zoo\Zoo\Zoo.h(19,15): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+  (编译源文件“main.cpp”)
+  
+D:\代码\The-Beginning\C++程序设计\大一下C++程序设计\实验四Zoo\Zoo\Zoo.h(34,10): warning C4244: “return”: 从“int”转换到“float”，可能丢失数据
+  (编译源文件“main.cpp”)
+  
+  正在生成代码...
+  Zoo.vcxproj -> D:\代码\The-Beginning\C++程序设计\大一下C++程序设计\实验四Zoo\Zoo\x64\Debug\Zoo.exe
