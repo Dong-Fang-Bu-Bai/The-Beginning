@@ -1,327 +1,242 @@
 #ifndef ZOO_H
 #define ZOO_H
 
-#include<string>
+#include <string>
+#include <vector>
+#include <map>
+#include <memory>
 
-class Zoo
-{
+// 前向声明
+class Animal;
+class AnimalEnclosure;
+class FoodSeller;
+class ZooKeeper;
+class Adult;
+
+class Money {
 public:
-	void OneDaySimulation();
+    Money(float initialMoney = 0) : SumOfCent(initialMoney), SumOfDollar(initialMoney / 100) {}
 
-	void EntireSimulation();
-};
+    int GetSumOfDollar() const { return SumOfDollar; }
+    float GetSumOfCent() const { return SumOfCent; }
 
-class Money
-{
-public:
-	Money(float InitialMoney)//有参构造
-	{
-		SumOfCent = InitialMoney;
-	}
+    Money operator +(int money) const {
+        return Money(SumOfCent + money);
+    }
 
-	Money()//无参构造
-	{
-		SumOfCent = 0;
-	}
-
-	int GetSumOfDollar() 
-	{
-		SumOfDollar = SumOfCent / 100;
-		return SumOfDollar;
-	}
-	float GetSumOfCent() 
-	{
-		return SumOfCent;
-	}
-
-	Money operator +(int money)//重载加法
-	{
-		Money m2;
-		m2.SumOfCent = this->SumOfCent + money;
-		return m2;
-	}
-
-	Money operator -(int money)//重载减法
-	{
-		Money m2;
-		m2.SumOfCent = this->SumOfCent - money;
-		return m2;
-	}
-
-
-	//float SumOfMoney;
-	int SumOfDollar;
-	int SumOfCent;// 1 dollar == 100 cents , in the unit of cent
-};
-
-class AnimalFood//For recording the type and amount of food.
-{
-public:
-	AnimalFood(std::string foodname,int foodamount)
-	{
-		TypeOfFood = foodname;
-		AmountOfFood = foodamount;
-	}
-
-	std::string& ReturnTypeOfFood()//接口 1
-	{
-		return TypeOfFood;
-	}
-
-	int& ReturnAmountOfFood()//接口 2
-	{
-		return AmountOfFood;
-	}
+    Money operator -(int money) const {
+        return Money(SumOfCent - money);
+    }
 
 private:
-	std::string TypeOfFood;/*peanuts for the elephant; 
-							carrots for the giraffes; 
-							bananas for the monkeys.*/
-
-	int AmountOfFood;//单位：份（题目定义）
+    int SumOfDollar;
+    float SumOfCent;
 };
 
-class AnimalEnclosure
-{
+class AnimalFood {
 public:
-//For housing the animal(s).
-//This should record the dirt level 
-//and current status(i.e.open / close to visitors).
-	int& ReturnDirtLevel()
-	{
-		return DirtLevel;
-	}
+    AnimalFood(std::string foodname, int foodamount)
+        : TypeOfFood(foodname), AmountOfFood(foodamount) {
+    }
 
-	bool& ReturnCurrentStatus()
-	{
-		return CurrentStatus;
-	}
+    std::string& ReturnTypeOfFood() { return TypeOfFood; }
+    int& ReturnAmountOfFood() { return AmountOfFood; }
 
 private:
-	int DirtLevel = 0;//整洁程度
-	bool CurrentStatus = 1;//开放状态
+    std::string TypeOfFood;
+    int AmountOfFood;
 };
 
-class Animal//抽象类
-{
+class AnimalEnclosure {
 public:
-	float Weight;//in the unit of KG
-	float AmountOfFoodEaten = 0;//单位：份（题目定义）
-};
-
-class Elephant:public Animal
-{
-public:
-	float& ReturnAmountOfFoodEaten()
-	{
-		return AmountOfFoodEaten;
-	}
+    int& ReturnDirtLevel() { return DirtLevel; }
+    bool& ReturnCurrentStatus() { return CurrentStatus; }
 
 private:
-
-	float TrunkLength;//象鼻长： 米
+    int DirtLevel = 0;
+    bool CurrentStatus = true;
 };
 
-class Giraffe :public Animal
-{
+class Person {
 public:
-	float& ReturnAmountOfFoodEaten()
-	{
-		return AmountOfFoodEaten;
-	}
+    virtual ~Person() = default;
+    virtual std::string GetName() const = 0;
+    virtual int GetAge() const = 0;
+
+protected:
+    std::string m_name;
+    int m_age = 0;
+};
+
+class ZooKeeper : public Person {
+public:
+    ZooKeeper(std::string name, int age) 
+    {
+        m_name = name;
+        m_age = age;
+    }
+    std::string GetName() const override { return m_name; }
+    int GetAge() const override { return m_age; }
+    int& ReturnDaysOfCleaning() { return DaysOfCleaning; }
+    bool& ReturnWorkStatus() { return WorkStatus; }
 
 private:
-
-	float NeckLength;//长颈鹿脖长： 米
+    int DaysOfCleaning = 0;
+    bool WorkStatus = false;
 };
 
-class Monkey  :public Animal
+class FoodSeller : public Person 
 {
 public:
-	float& ReturnAmountOfFoodEaten()
-	{
-		return AmountOfFoodEaten;
-	}
+    FoodSeller(std::string name, int age)
+        :
+        ElephantFood("Peanuts", 10000),
+        GiraffeFood("Carrots", 7000),
+        MonkeyFood("Bananas", 4000) 
+    {
+        m_name = name;
+        m_age = age;
+    }
+
+    std::string GetName() const override { return m_name; }
+    int GetAge() const override { return m_age; }
+
+    AnimalFood& ReturnElephantFood() { return ElephantFood; }
+    AnimalFood& ReturnGiraffeFood() { return GiraffeFood; }
+    AnimalFood& ReturnMonkeyFood() { return MonkeyFood; }
+    int& ReturnMoneyFromFoodSold() { return MoneyFromFoodSold; }
+
+    static int FoodPriceList[3];
 
 private:
-
-	float ArmLength;//猴子臂长： 米
+    AnimalFood ElephantFood;
+    AnimalFood GiraffeFood;
+    AnimalFood MonkeyFood;
+    int MoneyFromFoodSold = 0;
 };
 
-class Person//抽象类
-{
+class Visitor : public Person {
 public:
-
-	virtual std::string GetName() = 0;
-	virtual int GetAge() = 0;
-
-	std::string m_name;
-	int m_age;
+    std::string VisitorPassIDNumber;
 };
 
-class ZooKeeper:public Person
-{
+class Child : public Visitor {
 public:
-	ZooKeeper(std::string name, int age) 
-	{
-		m_name = name;
-		m_age = age;
-	}
-
-	std::string GetName() override
-	{
-		return m_name;
-	}
-	int GetAge() override
-	{
-		return m_age;
-	}
-
-	int& ReturnDaysOfCleaning()
-	{
-		return DaysOfCleaning;
-	}
-
-	bool& ReturnWorkStatus()
-	{
-		return WorkStatus;
-	}
+    Child(std::string name, int age, std::string IDNumber)
+    {
+        m_name = name;
+        m_age = age;
+        VisitorPassIDNumber = IDNumber;
+    }
+    std::string GetName() const override { return m_name; }
+    int GetAge() const override { return m_age; }
 
 private:
-	int DaysOfCleaning = 0;
-	bool WorkStatus = 0;//初始为未工作
+    int AnimalFoodOwned = 0;
 };
 
-class FoodSeller:public Person
-{
+class Adult : public Visitor {
 public:
-	FoodSeller(std::string name,int age):
-		ElephantFood("Peanuts",10000), 
-		GiraffeFood("Carrots", 7000),
-		MonkeyFood("Bananas", 4000)
-	{
-		m_name = name;
-		m_age = age;
-	}
+    Adult(std::string name, int age, std::string IDNumber)
+        : AdultMoney(0)
+    {
+        m_name = name;
+        m_age = age;
+        VisitorPassIDNumber = IDNumber;
+    }
+    Adult(float money) : AdultMoney(money) {
+        VisitorPassIDNumber = "19870532";
+    }
 
-	std::string GetName() override
-	{
-		return m_name;
-	}
-	int GetAge() override
-	{
-		return m_age;
-	}
-
-	AnimalFood& ReturnElephantFood()//接口 1
-	{
-		return ElephantFood;
-	}
-
-	AnimalFood& ReturnGiraffeFood()//接口 2
-	{
-		return GiraffeFood;
-	}
-
-	AnimalFood& ReturnMonkeyFood()//接口 3
-	{
-		return MonkeyFood;
-	}
-
-	float& ReturnMoneyFromFoodSold()//接口 4
-	{
-		return MoneyFromFoodSold;
-	}
-
-	static int FoodPriceList[3];
-private:
-	AnimalFood ElephantFood;
-	AnimalFood GiraffeFood;
-	AnimalFood MonkeyFood;
-	float MoneyFromFoodSold = 0;
-};
-
-class Vistor:public Person
-{
-public:
-
-	//Vistor(std::string name, int age, std::string IDNumber)
-	//	: VisitorPassIDNumber(IDNumber)
-	//{
-	//	m_name = name;
-	//	m_age = age;
-	//}
-
-
-	std::string VisitorPassIDNumber;
-};
-
-class Child :public Vistor
-{
-public:
-
-	Child(std::string name, int age, std::string IDNumber)
-	{
-		m_name = name;
-		m_age = age;
-		VisitorPassIDNumber = IDNumber;
-	}
-
-	std::string GetName() override
-	{
-		return m_name;
-	}
-	int GetAge() override
-	{
-		return m_age;
-	}
+    std::string GetName() const override { return m_name; }
+    int GetAge() const override { return m_age; }
+    Money& ReturnAdultMoney() { return AdultMoney; }
 
 private:
-	int AnimalFoodOwned = 0;
+    Money AdultMoney;
 };
 
-class Adult :public Vistor
-{
+class Animal {
 public:
-	Adult(std::string name, int age, std::string IDNumber)
-	{
-		m_name = name;
-		m_age = age;
-		VisitorPassIDNumber = IDNumber;
-	}
+    virtual ~Animal() = default;
+    virtual float& ReturnAmountOfFoodEaten() = 0;
+    virtual int CalculateDirtIncrease() const = 0;
+    virtual int GetFoodThreshold() const = 0;
+    virtual std::string GetFoodType() const = 0;
+    virtual float GetFoodConsumptionRate() const = 0;
 
-	Adult(float money) :AdultMoney(money){}
+protected:
+    float Weight = 30;
+    float AmountOfFoodEaten = 0;
+};
 
-
-	std::string GetName() override
-	{
-		return m_name;
-	}
-	int GetAge() override
-	{
-		return m_age;
-	}
-
-	Money& ReturnAdultMoney()//接口 
-	{
-		return AdultMoney;
-	}
+class Elephant : public Animal {
+public:
+    float& ReturnAmountOfFoodEaten() override { return AmountOfFoodEaten; }
+    int CalculateDirtIncrease() const override {
+        return (AmountOfFoodEaten > GetFoodThreshold()) ? (AmountOfFoodEaten - GetFoodThreshold()) : 0;
+    }
+    int GetFoodThreshold() const override { return 750; }
+    std::string GetFoodType() const override { return "Peanuts"; }
+    float GetFoodConsumptionRate() const override { return 1.0f; }
 
 private:
-
-	Money AdultMoney;
+    float TrunkLength = 3;
 };
 
+class Giraffe : public Animal {
+public:
+    float& ReturnAmountOfFoodEaten() override { return AmountOfFoodEaten; }
+    int CalculateDirtIncrease() const override {
+        return (AmountOfFoodEaten > GetFoodThreshold()) ? (AmountOfFoodEaten - GetFoodThreshold()) * 2 : 0;
+    }
+    int GetFoodThreshold() const override { return 500; }
+    std::string GetFoodType() const override { return "Carrots"; }
+    float GetFoodConsumptionRate() const override { return 0.5f; }
 
+private:
+    float NeckLength = 5;
+};
 
+class Monkey : public Animal {
+public:
+    float& ReturnAmountOfFoodEaten() override { return AmountOfFoodEaten; }
+    int CalculateDirtIncrease() const override {
+        return (AmountOfFoodEaten > GetFoodThreshold()) ? (AmountOfFoodEaten - GetFoodThreshold()) * 3 : 0;
+    }
+    int GetFoodThreshold() const override { return 300; }
+    std::string GetFoodType() const override { return "Bananas"; }
+    float GetFoodConsumptionRate() const override { return 0.333f; }
 
+private:
+    float ArmLength = 1.5;
+};
 
+class Zoo {
+public:
+    Zoo();
+    ~Zoo();
+    void OneDaySimulation();
+    void EntireSimulation();
 
+private:
+    std::vector<std::unique_ptr<Animal>> animals;
+    std::map<Animal*, AnimalEnclosure*> animalEnclosures;
+    std::unique_ptr<FoodSeller> foodseller;
+    std::unique_ptr<ZooKeeper> zookeeper;
+    int daysOperated = 0;
+    int totalAdults = 0;
+    int totalChildren = 0;
+    int elephantEnclosureClosedDays = 0;
+    int giraffeEnclosureClosedDays = 0;
+    int monkeyEnclosureClosedDays = 0;
 
+    void InitializeZoo();
+    void ProcessVisitor(Adult& adult, int childCount);
+    void FeedAnimals(int peanuts, int carrots, int bananas);
+    void CalculateDirtLevels();
+    void CleanEnclosures();
+    void PrintClosingStats(const std::string& reason);
+};
 
-
-
-
-
-
-#endif //ZOO_H
+#endif // ZOO_H

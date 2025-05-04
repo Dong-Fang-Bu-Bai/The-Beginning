@@ -1,332 +1,173 @@
-#include"Zoo.h"
-#include<cstdlib>
-#include<ctime>
-#include<iostream>
-using namespace std;
+#include "Zoo.h"
+#include <cstdlib>
+#include <ctime>
+#include <iostream>
+#include <memory>
+#include <algorithm>
 
-//1 elephant, 2 giraffes and 3 monkeys.
+int FoodSeller::FoodPriceList[3] = { 20, 30, 50 };
 
-int FoodSeller::FoodPriceList[3] = { 20,30,50 };
-
-//void operator +(Money &m1,int money)//重载加法
-//{
-//	m1.SumOfCent = m1.SumOfCent + money;
-//}
-//
-//void operator -(Money &m1, int money)//重载减法
-//{
-//	m1.SumOfCent = m1.SumOfCent - money;
-//}
-
-void Zoo::OneDaySimulation()
-{
-	//创建foodseller、zookeeper和3个AnimalEnclosure以及动物
-	FoodSeller foodseller("Alex", 22);
-	ZooKeeper zookeeper("Jack", 19);
-	AnimalEnclosure ElephantHome;
-	AnimalEnclosure GiraffeHome;
-	AnimalEnclosure MonkeyHome;
-	Elephant elephant;
-	Giraffe giraffe1;
-	Giraffe giraffe2;
-	Monkey monkey1;
-	Monkey monkey2;
-	Monkey monkey3;
-
-	int AdultAmount = rand() % 21 + 20;
-	//开馆循环
-	for (int i = 0; i < AdultAmount; i++)
-	{
-		int adultmoney = rand() % 1001 + 1000;
-		Adult adult(adultmoney);
-		int ChildAccompanied= rand() % 3 + 1;
-
-		//买票
-		adult.ReturnAdultMoney()=adult.ReturnAdultMoney() 
-			- (100 + 40 * ChildAccompanied);
-
-		
-		//买饲料
-		float MoneyOfEachFood = adult.ReturnAdultMoney().GetSumOfCent() / 3;
-		int AmountOfPeanutsBuied = (int)MoneyOfEachFood / FoodSeller::FoodPriceList[0];
-		int AmountOfCarrotsBuied = (int)MoneyOfEachFood / FoodSeller::FoodPriceList[1];
-		int AmountOfBananasBuied = (int)MoneyOfEachFood / FoodSeller::FoodPriceList[2];
-
-		//卖饲料
-		foodseller.ReturnElephantFood().ReturnAmountOfFood() -= AmountOfPeanutsBuied;
-		foodseller.ReturnGiraffeFood().ReturnAmountOfFood() -= AmountOfCarrotsBuied;
-		foodseller.ReturnMonkeyFood().ReturnAmountOfFood() -= AmountOfBananasBuied;
-			
-		//判断售卖员是否卖完饲料
-	    if (foodseller.ReturnElephantFood().ReturnAmountOfFood()
-			&& foodseller.ReturnGiraffeFood().ReturnAmountOfFood()
-			&& foodseller.ReturnMonkeyFood().ReturnAmountOfFood())
-		{
-			foodseller.ReturnMoneyFromFoodSold() += 
-				adult.ReturnAdultMoney().GetSumOfCent();   
-		}
-		else
-		{
-			if (!foodseller.ReturnElephantFood().ReturnAmountOfFood())
-			{
-				cout << "The zoo closed because the seller ran out of peanuts." << endl;
-				return;
-			}
-			else if (!foodseller.ReturnGiraffeFood().ReturnAmountOfFood())
-			{
-				cout << "The zoo closed because the seller ran out of carrots." << endl;
-				return;
-
-			}
-			else
-			{
-				cout << "The zoo closed because the seller ran out of bananas." << endl;
-				return;
-			}
-		}
-
-		//喂动物
-		if (ElephantHome.ReturnCurrentStatus())
-		{
-			elephant.ReturnAmountOfFoodEaten() += AmountOfPeanutsBuied;
-		}
-
-		if (GiraffeHome.ReturnCurrentStatus())
-		{
-			giraffe1.ReturnAmountOfFoodEaten() += AmountOfCarrotsBuied/2;
-			giraffe2.ReturnAmountOfFoodEaten() += AmountOfCarrotsBuied/2;
-
-		}
-
-		if (MonkeyHome.ReturnCurrentStatus())
-		{
-			monkey1.ReturnAmountOfFoodEaten() += AmountOfBananasBuied/3;
-			monkey2.ReturnAmountOfFoodEaten() += AmountOfBananasBuied/3;
-			monkey3.ReturnAmountOfFoodEaten() += AmountOfBananasBuied/3;
-
-		}
-
-	}
-
-	//闭馆复盘
-	//计算各区域的dirtlevel
-	if (elephant.ReturnAmountOfFoodEaten() > 750)
-	{
-		ElephantHome.ReturnDirtLevel() += (elephant.ReturnAmountOfFoodEaten() - 750);
-		elephant.ReturnAmountOfFoodEaten() = 0;
-	}
-
-	if (giraffe1.ReturnAmountOfFoodEaten() > 500)
-	{
-		GiraffeHome.ReturnDirtLevel() += (giraffe1.ReturnAmountOfFoodEaten()- 500)*2;
-		giraffe1.ReturnAmountOfFoodEaten() = 0;
-		giraffe2.ReturnAmountOfFoodEaten() = 0;
-	}
-
-	if (monkey1.ReturnAmountOfFoodEaten() > 300)
-	{
-		MonkeyHome.ReturnDirtLevel() += (monkey1.ReturnAmountOfFoodEaten() - 300) * 3;
-		monkey1.ReturnAmountOfFoodEaten() = 0;
-		monkey2.ReturnAmountOfFoodEaten() = 0;
-		monkey3.ReturnAmountOfFoodEaten() = 0;
-	}
-
-	//重置开放状态和zookeeper工作状态
-	ElephantHome.ReturnCurrentStatus() = 1;
-	GiraffeHome.ReturnCurrentStatus() = 1;
-	MonkeyHome.ReturnCurrentStatus() = 1;
-	zookeeper.ReturnWorkStatus() = 0;
-
-	//判断dirtlevel是否达标,否则去清理其中之一
-	if (ElephantHome.ReturnDirtLevel() > 2000&&!zookeeper.ReturnWorkStatus())
-	{
-		ElephantHome.ReturnDirtLevel() = 0;
-		ElephantHome.ReturnCurrentStatus() = 0;
-		zookeeper.ReturnWorkStatus() = 1;
-		zookeeper.ReturnDaysOfCleaning() += 1;
-	}
-	if (GiraffeHome.ReturnDirtLevel() > 2000 && !zookeeper.ReturnWorkStatus())
-	{
-		GiraffeHome.ReturnDirtLevel() = 0;
-		GiraffeHome.ReturnCurrentStatus() = 0;
-		zookeeper.ReturnWorkStatus() = 1;
-		zookeeper.ReturnDaysOfCleaning() += 1;
-	}
-	if (MonkeyHome.ReturnDirtLevel() > 2000 && !zookeeper.ReturnWorkStatus())
-	{
-		MonkeyHome.ReturnDirtLevel() = 0;
-		MonkeyHome.ReturnCurrentStatus() = 0;
-		zookeeper.ReturnWorkStatus() = 1;
-		zookeeper.ReturnDaysOfCleaning() += 1;
-	}
-
-	if (zookeeper.ReturnDaysOfCleaning() >= 10)
-	{
-		cout<< "The zoo closed because the zoo keeper had enough of cleaning and quit!" 
-			<< endl;
-		return;
-	}
-
+Zoo::Zoo() {
+    InitializeZoo();
 }
 
-void Zoo::EntireSimulation()
-{
-	//创建foodseller、zookeeper和3个AnimalEnclosure
-	FoodSeller foodseller("Alex", 22);
-	ZooKeeper zookeeper("Jack", 19);
-	AnimalEnclosure ElephantHome;
-	AnimalEnclosure GiraffeHome;
-	AnimalEnclosure MonkeyHome;
-	Elephant elephant;
-	Giraffe giraffe1;
-	Giraffe giraffe2;
-	Monkey monkey1;
-	Monkey monkey2;
-	Monkey monkey3;
+Zoo::~Zoo() {
+    for (auto& pair : animalEnclosures) {
+        delete pair.second;
+    }
+}
 
-	while (1)
-	{
-		int AdultAmount = rand() % 21 + 20;
-		//开馆循环
-		for (int i = 0; i < AdultAmount; i++)
-		{
-			int adultmoney = rand() % 1001 + 1000;
-			Adult adult(adultmoney);
-			int ChildAccompanied = rand() % 3 + 1;
+void Zoo::InitializeZoo() {
+    // 创建动物
+    animals.push_back(std::make_unique<Elephant>());
+    animals.push_back(std::make_unique<Giraffe>());
+    animals.push_back(std::make_unique<Giraffe>());
+    animals.push_back(std::make_unique<Monkey>());
+    animals.push_back(std::make_unique<Monkey>());
+    animals.push_back(std::make_unique<Monkey>());
 
-			//买票
-			
-			adult.ReturnAdultMoney()=adult.ReturnAdultMoney()
-				- (100 + 40 * ChildAccompanied);
+    // 创建围栏并建立映射
+    for (auto& animal : animals) {
+        animalEnclosures[animal.get()] = new AnimalEnclosure();
+    }
 
+    // 创建工作人员
+    foodseller = std::make_unique<FoodSeller>("Alex", 22);
+    zookeeper = std::make_unique<ZooKeeper>("Jack", 19);
+}
 
-			//买饲料
-			float MoneyOfEachFood = adult.ReturnAdultMoney().GetSumOfCent() / 3;
-			int AmountOfPeanutsBuied = MoneyOfEachFood / FoodSeller::FoodPriceList[0];
-			int AmountOfCarrotsBuied = MoneyOfEachFood / FoodSeller::FoodPriceList[1];
-			int AmountOfBananasBuied = MoneyOfEachFood / FoodSeller::FoodPriceList[2];
+void Zoo::ProcessVisitor(Adult& adult, int childCount) {
+    // 买票
+    adult.ReturnAdultMoney() = adult.ReturnAdultMoney() - (100 + 40 * childCount);
 
-			//卖饲料
-			foodseller.ReturnElephantFood().ReturnAmountOfFood() -= AmountOfPeanutsBuied;
-			foodseller.ReturnGiraffeFood().ReturnAmountOfFood() -= AmountOfCarrotsBuied;
-			foodseller.ReturnMonkeyFood().ReturnAmountOfFood() -= AmountOfBananasBuied;
+    // 买饲料
+    float moneyForFood = adult.ReturnAdultMoney().GetSumOfCent() / 3;
+    int peanuts = std::max(0.0f, moneyForFood / FoodSeller::FoodPriceList[0]);
+    int carrots = std::max(0.0f, moneyForFood / FoodSeller::FoodPriceList[1]);
+    int bananas = std::max(0.0f, moneyForFood / FoodSeller::FoodPriceList[2]);
 
-			//判断售卖员是否卖完饲料
-			if (foodseller.ReturnElephantFood().ReturnAmountOfFood()>0
-				&& foodseller.ReturnGiraffeFood().ReturnAmountOfFood()>0
-				&& foodseller.ReturnMonkeyFood().ReturnAmountOfFood()>0)
-			{
-				foodseller.ReturnMoneyFromFoodSold() +=
-					adult.ReturnAdultMoney().GetSumOfCent();
-			}
-			else
-			{
-				if (foodseller.ReturnElephantFood().ReturnAmountOfFood()<0)
-				{
-					cout << "The zoo closed because the seller ran out of peanuts." << endl;
-					return;
-				}
-				else if (foodseller.ReturnGiraffeFood().ReturnAmountOfFood() < 0)
-				{
-					cout << "The zoo closed because the seller ran out of carrots." << endl;
-					return;
+    // 卖饲料
+    foodseller->ReturnElephantFood().ReturnAmountOfFood() -= peanuts;
+    foodseller->ReturnGiraffeFood().ReturnAmountOfFood() -= carrots;
+    foodseller->ReturnMonkeyFood().ReturnAmountOfFood() -= bananas;
 
-				}
-				else if (foodseller.ReturnMonkeyFood().ReturnAmountOfFood() < 0)
-				{
-					cout << "The zoo closed because the seller ran out of bananas." << endl;
-					return;
-				}
-			}
+    // 检查食物是否售罄
+    if (foodseller->ReturnElephantFood().ReturnAmountOfFood() <= 0 ||
+        foodseller->ReturnGiraffeFood().ReturnAmountOfFood() <= 0 ||
+        foodseller->ReturnMonkeyFood().ReturnAmountOfFood() <= 0) {
+        return;
+    }
 
-			//喂动物
-			if (ElephantHome.ReturnCurrentStatus())
-			{
-				elephant.ReturnAmountOfFoodEaten() += AmountOfPeanutsBuied;
-			}
+    foodseller->ReturnMoneyFromFoodSold() += adult.ReturnAdultMoney().GetSumOfCent();
 
-			if (GiraffeHome.ReturnCurrentStatus())
-			{
-				giraffe1.ReturnAmountOfFoodEaten() += AmountOfCarrotsBuied / 2;
-				giraffe2.ReturnAmountOfFoodEaten() += AmountOfCarrotsBuied / 2;
+    // 喂动物
+    FeedAnimals(peanuts, carrots, bananas);
+}
 
-			}
+void Zoo::FeedAnimals(int peanuts, int carrots, int bananas) {
+    for (auto& animal : animals) {
+        if (!animalEnclosures[animal.get()]->ReturnCurrentStatus()) continue;
 
-			if (MonkeyHome.ReturnCurrentStatus())
-			{
-				monkey1.ReturnAmountOfFoodEaten() += AmountOfBananasBuied / 3;
-				monkey2.ReturnAmountOfFoodEaten() += AmountOfBananasBuied / 3;
-				monkey3.ReturnAmountOfFoodEaten() += AmountOfBananasBuied / 3;
+        if (auto elephant = dynamic_cast<Elephant*>(animal.get())) {
+            elephant->ReturnAmountOfFoodEaten() += peanuts;
+        }
+        else if (auto giraffe = dynamic_cast<Giraffe*>(animal.get())) {
+            giraffe->ReturnAmountOfFoodEaten() += carrots * giraffe->GetFoodConsumptionRate();
+        }
+        else if (auto monkey = dynamic_cast<Monkey*>(animal.get())) {
+            monkey->ReturnAmountOfFoodEaten() += bananas * monkey->GetFoodConsumptionRate();
+        }
+    }
+}
 
-			}
+void Zoo::CalculateDirtLevels() {
+    for (auto& animal : animals) {
+        auto enclosure = animalEnclosures[animal.get()];
+        int dirtIncrease = animal->CalculateDirtIncrease();
+        if (dirtIncrease > 0) {
+            enclosure->ReturnDirtLevel() += dirtIncrease;
+            animal->ReturnAmountOfFoodEaten() = 0;
+        }
+    }
+}
 
-		}
+void Zoo::CleanEnclosures() {
+    for (auto& animal : animals) {
+        auto enclosure = animalEnclosures[animal.get()];
+        if (enclosure->ReturnDirtLevel() > 2000 && !zookeeper->ReturnWorkStatus()) {
+            enclosure->ReturnDirtLevel() = 0;
+            enclosure->ReturnCurrentStatus() = false;
+            zookeeper->ReturnWorkStatus() = true;
+            zookeeper->ReturnDaysOfCleaning()++;
 
-		//闭馆复盘
-		//计算各区域的dirtlevel
-		if (elephant.ReturnAmountOfFoodEaten() > 750)
-		{
-			ElephantHome.ReturnDirtLevel() += (elephant.ReturnAmountOfFoodEaten() - 750);
-			elephant.ReturnAmountOfFoodEaten() = 0;
-		}
+            if (dynamic_cast<Elephant*>(animal.get())) elephantEnclosureClosedDays++;
+            else if (dynamic_cast<Giraffe*>(animal.get())) giraffeEnclosureClosedDays++;
+            else if (dynamic_cast<Monkey*>(animal.get())) monkeyEnclosureClosedDays++;
+        }
+    }
+}
 
-		if (giraffe1.ReturnAmountOfFoodEaten() > 500)
-		{
-			GiraffeHome.ReturnDirtLevel() += (2*giraffe1.ReturnAmountOfFoodEaten() - 1000);
-			giraffe1.ReturnAmountOfFoodEaten() = 0;
-			giraffe2.ReturnAmountOfFoodEaten() = 0;
-		}
+void Zoo::PrintClosingStats(const std::string& reason) {
+    std::cout << "The zoo has been open for " << daysOperated << " days" << std::endl;
+    std::cout << "The zoo closed because " << reason << std::endl;
+    std::cout << "The gross number of adults is " << totalAdults << std::endl;
+    std::cout << "The gross number of children is " << totalChildren << std::endl;
+    std::cout << "The total amount of money made by the seller is "
+        << foodseller->ReturnMoneyFromFoodSold() / 100 << " dollars and "
+        << foodseller->ReturnMoneyFromFoodSold() % 100 << " cents" << std::endl;
+    std::cout << "The number of days the zoo keeper spent cleaning is "
+        << zookeeper->ReturnDaysOfCleaning() << std::endl;
+    std::cout << "The total close day of ElephantHome is " << elephantEnclosureClosedDays << std::endl;
+    std::cout << "The total close day of GiraffeHome is " << giraffeEnclosureClosedDays << std::endl;
+    std::cout << "The total close day of MonkeyHome is " << monkeyEnclosureClosedDays << std::endl;
+}
 
-		if (monkey1.ReturnAmountOfFoodEaten() > 300)
-		{
-			MonkeyHome.ReturnDirtLevel() += (3*monkey1.ReturnAmountOfFoodEaten() - 900);
-			monkey1.ReturnAmountOfFoodEaten() = 0;
-			monkey2.ReturnAmountOfFoodEaten() = 0;
-			monkey3.ReturnAmountOfFoodEaten() = 0;
-		}
+void Zoo::OneDaySimulation() {
+    EntireSimulation();
+}
 
-		//重置开放状态和zookeeper工作状态
-		ElephantHome.ReturnCurrentStatus() = 1;
-		GiraffeHome.ReturnCurrentStatus() = 1;
-		MonkeyHome.ReturnCurrentStatus() = 1;
-		zookeeper.ReturnWorkStatus() = 0;
+void Zoo::EntireSimulation() {
+    srand(static_cast<unsigned>(time(nullptr)));
 
-		//判断dirtlevel是否达标,否则去清理其中之一
-		if (ElephantHome.ReturnDirtLevel() > 2000 && !zookeeper.ReturnWorkStatus())
-		{
-			ElephantHome.ReturnDirtLevel() = 0;
-			ElephantHome.ReturnCurrentStatus() = 0;
-			zookeeper.ReturnWorkStatus() = 1;
-			zookeeper.ReturnDaysOfCleaning() += 1;
-		}
-		if (GiraffeHome.ReturnDirtLevel() > 2000 && !zookeeper.ReturnWorkStatus())
-		{
-			GiraffeHome.ReturnDirtLevel() = 0;
-			GiraffeHome.ReturnCurrentStatus() = 0;
-			zookeeper.ReturnWorkStatus() = 1;
-			zookeeper.ReturnDaysOfCleaning() += 1;
-		}
-		if (MonkeyHome.ReturnDirtLevel() > 2000 && !zookeeper.ReturnWorkStatus())
-		{
-			MonkeyHome.ReturnDirtLevel() = 0;
-			MonkeyHome.ReturnCurrentStatus() = 0;
-			zookeeper.ReturnWorkStatus() = 1;
-			zookeeper.ReturnDaysOfCleaning() += 1;
-		}
+    while (true) {
+        daysOperated++;
+        int adultCount = rand() % 21 + 20;
+        totalAdults += adultCount;
 
-		if (zookeeper.ReturnDaysOfCleaning() >= 10)
-		{
-			cout << "The zoo closed because the zoo keeper had enough of cleaning and quit!"
-				<< endl;
-			return;
-		}
-		cout << "Day end report:" << endl;
-		cout << "Peanuts left: " << foodseller.ReturnElephantFood().ReturnAmountOfFood() << endl;
-		cout << "Carrots left: " << foodseller.ReturnGiraffeFood().ReturnAmountOfFood() << endl;
-		cout << "Bananas left: " << foodseller.ReturnMonkeyFood().ReturnAmountOfFood() << endl;
-		cout << "Elephant dirt: " << ElephantHome.ReturnDirtLevel() << endl;
-		cout << "Giraffe dirt: " << GiraffeHome.ReturnDirtLevel() << endl;
-		cout << "Monkey dirt: " << MonkeyHome.ReturnDirtLevel() << endl;
-		cout << "Keeper cleaning days: " << zookeeper.ReturnDaysOfCleaning() << endl;
-	}
+        for (int i = 0; i < adultCount; i++) {
+            int childCount = rand() % 3 + 1;
+            totalChildren += childCount;
+
+            Adult adult(static_cast<float>(rand() % 1001 + 1000));
+            ProcessVisitor(adult, childCount);
+
+            // 检查食物是否售罄
+            if (foodseller->ReturnElephantFood().ReturnAmountOfFood() <= 0) {
+                PrintClosingStats("the seller ran out of peanuts.");
+                return;
+            }
+            if (foodseller->ReturnGiraffeFood().ReturnAmountOfFood() <= 0) {
+                PrintClosingStats("the seller ran out of carrots.");
+                return;
+            }
+            if (foodseller->ReturnMonkeyFood().ReturnAmountOfFood() <= 0) {
+                PrintClosingStats("the seller ran out of bananas.");
+                return;
+            }
+        }
+
+        CalculateDirtLevels();
+        CleanEnclosures();
+
+        // 重置围栏状态
+        for (auto& pair : animalEnclosures) {
+            pair.second->ReturnCurrentStatus() = true;
+        }
+        zookeeper->ReturnWorkStatus() = false;
+
+        if (zookeeper->ReturnDaysOfCleaning() >= 10) {
+            PrintClosingStats("the zoo keeper had enough of cleaning and quit!");
+            return;
+        }
+    }
 }

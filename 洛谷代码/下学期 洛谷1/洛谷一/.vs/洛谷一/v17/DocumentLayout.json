@@ -18,8 +18,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,7 +32,7 @@
               "RelativeDocumentMoniker": "\u73A9\u5177.cpp",
               "ToolTip": "D:\\\u4EE3\u7801\\The-Beginning\\\u6D1B\u8C37\u4EE3\u7801\\\u4E0B\u5B66\u671F \u6D1B\u8C371\\\u6D1B\u8C37\u4E00\\\u73A9\u5177.cpp",
               "RelativeToolTip": "\u73A9\u5177.cpp",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAACkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-16T15:17:07.277Z",
               "EditorCaption": ""
@@ -43,8 +47,7 @@
               "RelativeToolTip": "\u8D66\u514D.cpp",
               "ViewState": "AgIAADMAAAAAAAAAAAAAADgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-14T05:28:44.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T05:28:44.39Z"
             }
           ]
         }

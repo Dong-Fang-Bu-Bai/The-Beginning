@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\\u4EE3\u7801\\The-Beginning\\\u6D1B\u8C37\u4EE3\u7801\\\u4E0B\u5B66\u671F \u6D1B\u8C373\\\u6D1B\u8C37\u4E09\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{44AB1EAE-7156-4FD2-92B6-EDAF6D9A26E5}|\u6D1B\u8C37\u4E09.vcxproj|D:\\\u4EE3\u7801\\The-Beginning\\\u6D1B\u8C37\u4EE3\u7801\\\u4E0B\u5B66\u671F \u6D1B\u8C373\\\u6D1B\u8C37\u4E09\\\u9EA6\u68EE\u6570.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{44AB1EAE-7156-4FD2-92B6-EDAF6D9A26E5}|\u6D1B\u8C37\u4E09.vcxproj|solutionrelative:\u9EA6\u68EE\u6570.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44AB1EAE-7156-4FD2-92B6-EDAF6D9A26E5}|\u6D1B\u8C37\u4E09.vcxproj|D:\\\u4EE3\u7801\\The-Beginning\\\u6D1B\u8C37\u4EE3\u7801\\\u4E0B\u5B66\u671F \u6D1B\u8C373\\\u6D1B\u8C37\u4E09\\\u4E24\u53EA\u5854\u59C6\u6C83\u65AF\u725B The Tamworth Two.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{44AB1EAE-7156-4FD2-92B6-EDAF6D9A26E5}|\u6D1B\u8C37\u4E09.vcxproj|solutionrelative:\u4E24\u53EA\u5854\u59C6\u6C83\u65AF\u725B The Tamworth Two.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "\u9EA6\u68EE\u6570.cpp",
+              "DocumentMoniker": "D:\\\u4EE3\u7801\\The-Beginning\\\u6D1B\u8C37\u4EE3\u7801\\\u4E0B\u5B66\u671F \u6D1B\u8C373\\\u6D1B\u8C37\u4E09\\\u9EA6\u68EE\u6570.cpp",
+              "RelativeDocumentMoniker": "\u9EA6\u68EE\u6570.cpp",
+              "ToolTip": "D:\\\u4EE3\u7801\\The-Beginning\\\u6D1B\u8C37\u4EE3\u7801\\\u4E0B\u5B66\u671F \u6D1B\u8C373\\\u6D1B\u8C37\u4E09\\\u9EA6\u68EE\u6570.cpp*",
+              "RelativeToolTip": "\u9EA6\u68EE\u6570.cpp*",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAAALsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-28T01:48:17.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "\u4E24\u53EA\u5854\u59C6\u6C83\u65AF\u725B The Tamworth Two.cpp",
+              "DocumentMoniker": "D:\\\u4EE3\u7801\\The-Beginning\\\u6D1B\u8C37\u4EE3\u7801\\\u4E0B\u5B66\u671F \u6D1B\u8C373\\\u6D1B\u8C37\u4E09\\\u4E24\u53EA\u5854\u59C6\u6C83\u65AF\u725B The Tamworth Two.cpp",
+              "RelativeDocumentMoniker": "\u4E24\u53EA\u5854\u59C6\u6C83\u65AF\u725B The Tamworth Two.cpp",
+              "ToolTip": "D:\\\u4EE3\u7801\\The-Beginning\\\u6D1B\u8C37\u4EE3\u7801\\\u4E0B\u5B66\u671F \u6D1B\u8C373\\\u6D1B\u8C37\u4E09\\\u4E24\u53EA\u5854\u59C6\u6C83\u65AF\u725B The Tamworth Two.cpp",
+              "RelativeToolTip": "\u4E24\u53EA\u5854\u59C6\u6C83\u65AF\u725B The Tamworth Two.cpp",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-27T14:46:07.422Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
