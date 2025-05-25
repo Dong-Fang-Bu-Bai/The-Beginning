@@ -33,5 +33,8 @@
     <ClCompile Include="06 多态案例三-电脑组装.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="二维三维形状.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
