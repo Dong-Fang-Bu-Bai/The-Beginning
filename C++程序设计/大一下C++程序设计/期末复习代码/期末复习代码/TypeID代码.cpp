@@ -28,7 +28,7 @@
 //		cout << "B is here" << endl;
 //	}
 //};
-//
+
 //class C :public Base
 //{
 //public:

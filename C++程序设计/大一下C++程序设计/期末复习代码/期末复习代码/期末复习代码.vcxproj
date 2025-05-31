@@ -131,6 +131,17 @@
     <ClCompile Include="上机实验1-1.cpp" />
     <ClCompile Include="上机实验1-2.cpp" />
     <ClCompile Include="上机实验1-3.cpp" />
+    <ClCompile Include="上机实验1-4.cpp" />
+    <ClCompile Include="上机实验2-1.cpp" />
+    <ClCompile Include="上机实验2-3.cpp" />
+    <ClCompile Include="上机实验2-4.cpp" />
+    <ClCompile Include="上机实验2-5.cpp" />
+    <ClCompile Include="上机实验3-2.cpp" />
+    <ClCompile Include="上机实验3-3.cpp" />
+    <ClCompile Include="上机实验4-1.cpp" />
+    <ClCompile Include="上机实验4-2.cpp" />
+    <ClCompile Include="上机实验4-3.cpp" />
+    <ClCompile Include="上机实验4-4.cpp" />
     <ClCompile Include="类模板实验1.cpp" />
     <ClCompile Include="类模板实验2.cpp" />
     <ClCompile Include="类模板实验3.cpp" />
